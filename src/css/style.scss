@@ -1,0 +1,1654 @@
+/*!
+* www.KNACSS.com V2.9.3 (2014-02) @author: Raphael Goetter, Alsacreations
+* Licence WTFPL http://www.wtfpl.net/
+*/
+
+/* ----------------------------- */
+
+/* == soft reset                 */
+
+/* ----------------------------- */
+
+/* switching box model for all elements */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* soft reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding-left: 2em;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+audio,
+canvas {
+  display: inline-block;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+/* ----------------------------- */
+
+/* == typography                 */
+
+/* ----------------------------- */
+
+/* base font-size corresponds to 10px and is adapted to rem unit */
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+	color: #000000;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	background: #fff;
+	font-size: 1.4em;
+	line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { -webkit-font-smoothing: subpixel-antialiased; }
+
+body .invisible{
+	display: none;
+}
+
+::selection {
+  background: #ff433d; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ff433d; /* Gecko Browsers */
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.relative{
+  position:relative;
+}
+
+.absolute{
+  position:absolute;
+  left: 0;
+  top: 0;
+}
+
+.fixed{
+  position:fixed;
+  left: 0;
+  top: 0;
+}
+
+.no-decoration{
+  text-decoration: none;
+}
+
+.auto{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.noscroll{
+  overflow: hidden;
+}
+
+/* pour infobulle gmap */
+.scrollFix {
+    padding: 20px;
+}
+
+/* font-sizing for content */
+
+/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption,
+details,
+figure,
+hgroup {
+  margin-top: .75em;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* alternate font-sizing */
+
+.smaller {
+  font-size: 0.7142857142857143em; /* 10 px */
+}
+
+.less_small {
+  font-size: 0.8em;
+}
+
+.small {
+  font-size: 0.8571428571428571em; /* 12 px */
+}
+
+.less_normal{
+  font-size: 0.93em; /* 13 px */
+}
+
+.more_normal{
+  font-size: 1.07em; /* 15 px */
+}
+
+.big{
+  font-size: 1.1428571428571428em; /* 16 px */
+}
+
+.bigger{
+  font-size: 1.2857142857142858em; /* 18 px */
+}
+
+.biggest {
+  font-size: 1.4285714285714286em; /* 20 px */
+}
+
+
+.more_big{
+  font-size: 1.5em; /* 21 px */
+}
+
+.little_little_more_big {
+  font-size: 1.5715em; /* 22 px */
+}
+
+.little_more_big {
+  font-size: 1.643em; /* 23 px */
+}
+
+.more_more_big{
+  font-size: 1.7142857142857143em; /* 24 px */
+}
+
+.little_more_more_big {
+  font-size: 1.7856em; /* 25 px */
+}
+
+.little_very_big{
+  font-size: 1.8571428571428571em; /* 26 px */
+}
+
+.little_more_very_big{
+  font-size: 2.14em; /* 30 px */
+}
+
+.very_big{
+	font-size: 2.2857142857142858em; /* 32 px */
+}
+
+.little_very_very_big{
+  font-size: 2.4278em; /* 34 px */
+}
+
+.very_very_big{
+  font-size: 2.57em; /* 36 px */
+}
+
+.super_big{
+  font-size: 2.86em; /* 40 px */
+}
+
+.mega_big{
+  font-size: 6.86em; /* 96 px */
+}
+code,
+pre,
+samp,
+kbd {
+  white-space: pre-line;
+  /* IE fix */
+  white-space: pre-wrap;
+  font-family: Consolas, 'DejaVu Sans Mono', Courier, monospace;
+  line-height: 1;
+}
+
+code,
+kbd,
+mark {
+  border-radius: 2px;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+kbd {
+  padding: 0 2px;
+  border: 1px solid #999;
+}
+
+code {
+  padding: 2px 4px;
+  background: rgba(0, 0, 0, 0.04);
+  color: #b11;
+}
+
+mark {
+  padding: 2px 4px;
+  background: #ff0;
+}
+
+sup,
+sub {
+  vertical-align: 0;
+  position: relative;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+/* ----------------------------- */
+
+/* == hiding content             */
+
+/* ----------------------------- */
+
+/* hiding content */
+
+.visually-hidden {
+  position: absolute;
+  left: -7000px;
+  overflow: hidden;
+}
+
+[dir=rtl] .visually-hidden {
+  left: auto;
+  right: -7000px;
+}
+
+.desktop-hidden {
+  display: none;
+}
+
+/* hidden on desktop */
+
+/* ----------------------------- */
+
+/* == skip links styling         */
+
+/* ----------------------------- */
+
+.skip-links {
+  position: absolute;
+}
+
+.skip-links a {
+  position: absolute;
+  left: -7000px;
+  padding: 0.5em;
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+.skip-links a:focus {
+  position: static;
+}
+
+/* ----------------------------- */
+
+/* == browsers consistency       */
+
+/* ----------------------------- */
+
+/* avoid top margins on first content element */
+
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+/* avoid margins on nested elements */
+
+li p,
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* max values */
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input {
+  max-width: 100%;
+}
+
+/* margin-bottom on tables */
+
+table {
+  margin-bottom: 1.5em;
+}
+
+/* Google Gmap3 bug fix on images 
+
+:not(.gm-style) img {
+  height: auto !important;
+}*/
+
+.ie678 .gm-style img {
+  height: 100%;
+  /* IE678 hack */
+}
+
+.gm-style img,
+.gmnoscreen img,
+.gmnoprint img {
+  max-width: none !important;
+}
+
+/* scripts */
+
+body > script {
+  display: none !important;
+}
+
+/* ----------------------------- */
+
+/* ==layout and modules          */
+
+/* ----------------------------- */
+
+/* float layout */
+
+/* module, gains superpower "BFC" Block Formating Context */
+
+.mod {
+  overflow: hidden;
+}
+
+/* blocks that needs to be placed under floats */
+
+.clear,
+.line,
+.row {
+  clear: both;
+}
+
+/* blocks that must contain floats */
+
+.clearfix:after,
+.line:after,
+.mod:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* table layout */
+
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.row > *,
+.col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* inline-block */
+
+.inbl {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* alignments (blocks and inline) */
+
+/* ------------------------------ */
+
+/* left elements */
+
+.left {
+  float: left;
+}
+
+img.left {
+  margin-right: 1em;
+}
+
+/* right elements */
+
+.right {
+  float: right;
+}
+
+img.right {
+  margin-left: 1em;
+}
+
+img.left,
+img.right {
+  margin-bottom: 5px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.txtleft {
+  text-align: left;
+}
+
+.txtright {
+  text-align: right;
+}
+
+.txtcenter{
+  text-align: center;
+}
+
+
+/* ----------------------------- */
+
+/* == spacing helpers            */
+
+/* .. use only when needed       */
+
+/* ----------------------------- */
+
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l = all,top,right,bottom,left
+s,m,l,n = small(10px),medium(20px),large(30px),none(0)
+source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+*/
+
+.m-reset,
+.ma0 {
+  margin: 0;
+}
+
+.p-reset,
+.pa0 {
+  padding: 0;
+}
+
+.ma1,
+.mas {
+  margin: 10px;
+}
+
+.ma2,
+.mam {
+  margin: 20px;
+}
+
+.ma3,
+.mal {
+  margin: 30px;
+}
+
+.pa1,
+.pas {
+  padding: 10px;
+}
+
+.pa2,
+.pam {
+  padding: 20px;
+}
+
+.pa3,
+.pal {
+  padding: 30px;
+}
+
+.mt0,
+.mtn {
+  margin-top: 0;
+}
+
+.mt1,
+.mts {
+  margin-top: 10px;
+}
+
+.mt2,
+.mtm {
+  margin-top: 20px;
+}
+
+.mt3,
+.mtl {
+  margin-top: 30px;
+}
+
+.mr0,
+.mrn {
+  margin-right: 0;
+}
+
+.mr1,
+.mrs {
+  margin-right: 10px;
+}
+
+.mr2,
+.mrm {
+  margin-right: 20px;
+}
+
+.mr3,
+.mrl {
+  margin-right: 30px;
+}
+
+.mb0,
+.mbn {
+  margin-bottom: 0;
+}
+
+.mb1,
+.mbs {
+  margin-bottom: 10px;
+}
+
+.mb2,
+.mbm {
+  margin-bottom: 20px;
+}
+
+.mb3,
+.mbl {
+  margin-bottom: 30px;
+}
+
+.ml0,
+.mln {
+  margin-left: 0;
+}
+
+.ml1,
+.mls {
+  margin-left: 10px;
+}
+
+.ml2,
+.mlm {
+  margin-left: 20px;
+}
+
+.ml3,
+.mll {
+  margin-left: 30px;
+}
+
+.pt0,
+.ptn {
+  padding-top: 0;
+}
+
+.pt1,
+.pts {
+  padding-top: 10px;
+}
+
+.pt2,
+.ptm {
+  padding-top: 20px;
+}
+
+.pt3,
+.ptl {
+  padding-top: 30px;
+}
+
+.pr0,
+.prn {
+  padding-right: 0;
+}
+
+.pr1,
+.prs {
+  padding-right: 10px;
+}
+
+.pr2,
+.prm {
+  padding-right: 20px;
+}
+
+.pr3,
+.prl {
+  padding-right: 30px;
+}
+
+.pb0,
+.pbn {
+  padding-bottom: 0;
+}
+
+.pb1,
+.pbs {
+  padding-bottom: 10px;
+}
+
+.pb2,
+.pbm {
+  padding-bottom: 20px;
+}
+
+.pb3,
+.pbl {
+  padding-bottom: 30px;
+}
+
+.pl0,
+.pln {
+  padding-left: 0;
+}
+
+.pl1,
+.pls {
+  padding-left: 10px;
+}
+
+.pl2,
+.plm {
+  padding-left: 20px;
+}
+
+.pl3,
+.pll {
+  padding-left: 30px;
+}
+
+/* ----------------------------- */
+
+/* == iefix                      */
+
+/* ----------------------------- */
+
+/* Make sure you are using Conditional Classes in your HTML */
+
+/* see : http://www.alsacreations.com/astuce/lire/988-classes-conditionnelles-HTML.html */
+
+.ie678 h1,
+.ie678 .h1-like {
+  font-size: 2.2857142857142856em;
+}
+
+.ie678 h2,
+.ie678 .h2-like {
+  font-size: 2em;
+}
+
+.ie678 h3,
+.ie678 .h3-like {
+  font-size: 1.7142857142857142em;
+}
+
+.ie678 h4,
+.ie678 .h4-like {
+  font-size: 1.4285714285714286em;
+}
+
+.ie678 h5,
+.ie678 .h5-like {
+  font-size: 1.2857142857142858em;
+}
+
+.ie678 h6,
+.ie678 .h6-like {
+  font-size: 1.1428571428571428em;
+}
+
+/* hasLayout for IE6/IE7 */
+
+.ie67 .clearfix,
+.ie67 .line,
+.ie67 .mod,
+.ie67 .row,
+.ie67 .col {
+  zoom: 1;
+}
+
+/* inline-block and table-cell for IE6/IE7 */
+
+/* warning: .col needs width on IE6/IE7 */
+
+.ie67 .btn,
+.ie67 .col,
+.ie67 .inbl {
+  display: inline;
+  zoom: 1;
+}
+
+.ie8 img {
+  width: auto;
+  /* @bugfix for IE8 */
+}
+
+/* Active box-sizing for IE6/IE7 */
+
+/* @source https://github.com/Schepp/box-sizing-polyfill */
+
+/*
+.ie67 * {
+	behavior: url(/lib/box-sizing-polyfill/boxsizing.htc);
+}
+*/
+
+/* ----------------------------- */
+
+/* == quick print reset          */
+
+/* ----------------------------- */
+
+@media print {
+  p,
+  blockquote {
+    orphans: 2;
+    widows: 2;
+  }
+
+  blockquote,
+  ul,
+  ol {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  caption {
+    page-break-after: avoid;
+  }
+}
+
+/* debug helper */
+
+.knacss-debug {
+  background: pink;
+  outline: 3px solid maroon;
+}/* ---------------------------------- */
+
+
+
+/* ==tables                      */
+
+/* ----------------------------- */
+
+table,
+.table {
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+table {
+  width: 100%;
+}
+
+.table {
+  display: table;
+}
+
+table#recaptcha_table,
+table.table-auto {
+  table-layout: auto;
+}
+
+caption {
+  padding: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+table {
+  border: 1px solid #ccc;
+}
+
+tr > * + * {
+  border-left: 1px solid #ccc;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  color: #333;
+}
+
+/* alternate tables */
+
+.alternate {
+  border: 0;
+}
+
+.alternate tbody {
+  border: 1px solid #ccc;
+}
+
+.alternate thead tr > * + * {
+  border-left: 0;
+}
+
+.alternate tbody tr > * + * {
+  border-left: 1px solid #ccc;
+}
+
+/* alternate-vert tables */
+
+.alternate-vert {
+  border: 0;
+  border-right: 1px solid #ccc;
+}
+
+.alternate-vert tr > :first-child {
+  border-bottom: 0;
+}
+
+.alternate-vert tr > * + * {
+  border-top: 1px solid #ccc;
+}
+
+/* striped tables */
+
+.striped tbody tr:nth-child(odd) {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* striped-vert tables */
+
+.striped-vert tr > :first-child {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.05);
+}/* ----------------------------- */
+
+
+/* ==styles du site */
+$couleur_1: #231c34;
+$couleur_2: #f2eee7;
+$couleur_3: #333;
+$couleur_4: #ccc;
+$couleur_5: #ff433d;
+$couleur_6: #fff;
+$couleur_7: #1e1147;
+$couleur_8: #bdb8ce;
+$couleur_9: #1e1147;
+$couleur_10: #000;
+$couleur_11: #eee;
+$couleur_12: #948fa1;
+$couleur_13: #1e1147;
+
+
+.dosis{
+  font-family: 'Dosis', Helvetica, sans-serif;
+}
+
+
+html, body{
+  height: 100%;
+}
+
+.centre{
+  width: 100%;
+  max-width: 775px;
+  margin: auto;
+}
+
+.conteneur-beige{
+  background:$couleur_2;
+}
+
+.couleur_1{
+  color:$couleur_1;
+}
+
+.couleur_5{
+  color:$couleur_5;
+}
+
+.couleur_6{
+  color:$couleur_6;
+}
+
+.couleur_7{
+  color:$couleur_7;
+}
+
+.couleur_12{
+  color:$couleur_12;
+}
+
+.couleur_13{
+  color:$couleur_13;
+}
+
+.sep{
+  width: 60px;
+  height: 3px;
+  background: $couleur_3;
+  border-bottom:1px solid $couleur_4;
+  margin: auto;
+  display: block;
+}
+
+.mini-sep{
+  width: 15px;
+  height: 2px;
+  background: $couleur_3;
+  border-bottom:1px solid $couleur_4;
+  margin: 10px 0;
+  display: block;
+}
+
+
+/* Mosaïque */
+
+
+.volet{
+  display:none;
+}
+
+.sidr{
+  width: 520px;
+  display: none;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: $couleur_6;
+  border-left:1px solid $couleur_11;
+  &.right{
+    left: auto;
+    right: -520px;
+  }
+
+  .sidr-inner{
+    padding: 60px 55px;
+
+    img{
+      margin: 5px auto;
+      display: block;
+      height:auto;
+    }
+  }
+
+  h1{
+    line-height: 1em;
+    font-size: 2.125em;
+    font-weight: 500;
+    color:#2d2d2d;
+  }
+
+  h3{
+    font-size: 1.66em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  h2{
+    color:#ffa28a;
+    font-weight: 700;
+    font-size: 1.4375em;
+  }
+
+  .texte{
+    color:#2d2d2d;
+    font-size: 1.1875em;
+    a{
+      text-decoration: none;
+      color:$couleur_5;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.right-menu{
+  position:fixed;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  right: 20px;
+  border-radius:20px;
+  background:#00637e;
+  z-index: 10;
+
+  &:after, &:before{
+    content:"";
+    background:$couleur_6;
+    width: 19px;
+    height: 4px;
+    position:absolute;
+    transition: transform 0.3s ease 0s, top 0.3s ease 0s;
+    left: 11px;
+    top: 18px;
+    border-radius:2px;
+  }
+
+  &:after{
+    transform: rotate(90deg);
+  }
+
+  &.ouvert:after{
+    transform: rotate(225deg);
+  }
+
+  &.ouvert:before{
+    transform: rotate(135deg);
+  }
+}
+
+
+/* /Mosaïque */
+
+
+/* Carte */
+.map{
+  width: 100%;
+  height: 100%;
+  position:relative;
+  h1.logo-principal{
+    position:absolute;
+    z-index: 2;
+    top: 53px;
+    left: 45px;
+    width: 295px;
+    &:before{
+      width: 240px;
+      height: 230px;
+      display: block;
+      content:"";
+      z-index: 1;
+      position:absolute;
+      left: 16px;
+      top: -53px;
+      background: #fa8169;
+    }
+
+    img{
+      position:relative;
+      z-index: 2;
+    }
+  }
+}
+
+h1.infobulle{
+  font-size:2em;
+  &:after{
+    content:"";
+    display: block;
+    margin: 3px auto;
+    height: 1px;
+    width: 12px;
+    background:$couleur_10;
+  }
+}
+
+h2.infobulle{
+  font-size:1.5em;
+}
+
+p.infobulle{
+  font-size:1.4em;
+  margin-bottom: 20px;
+}
+
+#sidr-filtres{
+  width: 100%;
+  max-width: 520px;
+  left: auto;
+  right: -520px;
+  box-shadow: 2px 2px 10px #666;
+  h1{
+    margin-bottom: 50px;
+    font-size:2.125em;
+    line-height: 1em;
+    font-weight: 500;
+    &:after{
+      content:"";
+      display: block;
+      margin: 13px auto;
+      height: 16px;
+      width: 34px;
+      background:url('../../img/titre_filtre_bottom.png') no-repeat;
+    }
+
+    &:before{
+      content:"";
+      display: block;
+      margin: 13px auto;
+      height: 44px;
+      width: 76px;
+      background:url('../../img/titre_filtre_top.png') no-repeat;
+    }
+  }
+
+  ul{
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidr-inner{
+    padding: 60px 20px;
+  }
+}
+
+.right-menu.volet-map{
+  background:url('../../img/icn-volet-map.png') no-repeat;
+  width: 52px;
+  height: 52px;
+  &:after, &:before{
+    display: none;
+  }
+
+  &.ouvert{
+    background:#00637e;
+    border-radius:26px;
+    &:after, &:before{
+      display: block;
+      width: 26px;
+      top: 24px;
+      left:13px;
+    }
+  }
+}
+
+.volet.marqueur{
+  z-index:10;
+  width: 100%;
+  max-width: 520px;
+  box-shadow:2px 2px 10px #666;
+
+  h1{
+    background: url('../../img/style_titre.png') no-repeat center top;
+    width: 100%;
+    padding-top: 54px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    &::after{
+      display: block;
+      content:'';
+      margin: 13px auto;
+      height: 16px;
+      width: 34px;
+      background:url('../../img/titre_filtre_bottom.png') no-repeat -3px 0;
+    }
+  }
+
+  h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.right-menu.volet-marqueur{
+  display: none;
+  z-index:11;
+  &.ouvert{
+    display:block;
+  }
+}
+
+.reinit{
+  color:#2d2d2d;
+  font-weight: bold;
+  font-size:20px;
+  transition: all 0.3s ease 0s;
+  &:hover, &.selected{
+    color:#ffa28a;
+
+    &::before{
+      background:url('../../img/tri_tous_actif.png') no-repeat;
+    }
+  }
+
+  &::before{
+    content:"";
+    display: block;
+    width: 236px;
+    height: 120px;
+    margin:auto;
+    background:url('../../img/tri_tous.png') no-repeat;
+  }
+}
+
+.liste-filtres{
+  a{
+    transition: all 0.3s ease 0s;
+    color:#2d2d2d;
+    font-weight: bold;
+    font-size:20px;
+    &.selected, &:hover{
+      color:#ffa28a;
+    }
+
+    &::before{
+      content:"";
+      display: block;
+      margin:auto;
+      width: 236px;
+      height: 120px;
+    }
+
+    &.famille{
+      &.selected, &:hover{
+        &::before{
+          background:url('../../img/tri_famille_actif.png') no-repeat;
+        }
+      }
+
+      &::before{
+        background:url('../../img/tri_famille.png') no-repeat;
+      }
+    }
+
+    &.amis{
+      &.selected, &:hover{
+        &::before{
+          background:url('../../img/tri_amis_actif.png') no-repeat;
+        }
+      }
+
+      &::before{
+        background:url('../../img/tri_amis.png') no-repeat;
+      }
+    }
+
+    &.lhomme-mystere{
+      &.selected, &:hover{
+        &::before{
+          background:url('../../img/tri_hommemystere_actif.png') no-repeat;
+        }
+      }
+
+      &::before{
+        background:url('../../img/tri_hommemystere.png') no-repeat;
+      }
+    }
+
+    &.collegues{
+      &.selected, &:hover{
+        &::before{
+          background:url('../../img/tri_collegues_actif.png') no-repeat;
+        }
+      }
+
+      &::before{
+        background:url('../../img/tri_collegues.png') no-repeat;
+      }
+    }
+
+    &.amies-denfance{
+      &.selected, &:hover{
+        &::before{
+          background:url('../../img/tri_amishistorique_actif.png') no-repeat;
+        }
+      }
+
+      &::before{
+        background:url('../../img/tri_amishistorique.png') no-repeat;
+      }
+    }
+  }
+}
+
+
+.lien_marqueur{
+  border: 3px solid $couleur_5;
+  display: block;
+  height: 60px;
+  margin: 50px auto 0;
+  padding-top: 11px;
+  width: 145px;
+  transition: all 0.3s ease 0s;
+
+  &:hover{
+    color:$couleur_6;
+    background:$couleur_5;
+    border-color:$couleur_5;
+  }
+}
+
+#gmap_marqueur{
+  width: 100%;
+  height: 100%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* /Carte */
+
+
+/* Commun */
+.infos{
+  background: $couleur_1;
+  height: 88px;
+  bottom: -6px;
+  top:inherit;
+  width: 100%;
+  padding-left: 25px;
+  padding-top: 35px;
+  z-index: 2;
+  transition: all 0.2s ease 0s;
+  span{
+    display: inline-block;
+    margin-right: 40px;
+    padding-left: 83px;
+    position: relative;
+    vertical-align: top;
+    &:before{
+      content:"";
+      background:url('../../img/moyen-gif.gif') no-repeat center center;
+      width: 49px;
+      height: 66px;
+      display: inline-block;
+      position:absolute;
+      left: 0;
+      top: -24px;
+    }
+  }
+  h4{
+    display:inline-block;
+    line-height: 0.8em;
+  }
+
+  &.inactif{
+    span:before{
+      background:url('../../img/wave-mini.png') no-repeat center center;
+    }
+  }
+
+  &.ouvert{
+    bottom: 82px;
+  }
+}
+
+.navigation-hover{
+  background: $couleur_1;
+  height: 88px;
+  bottom: -6px;
+  top:inherit;
+  width: 100%;
+  display:block;
+  z-index: 2;
+
+  > div{
+    width: 88px;
+    height: 88px;
+    img{
+      width: 100%;
+    }
+  }
+  
+
+  h3{
+    min-width: 115px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 0 20px;
+    span{
+    }
+  }
+
+  h4{
+    vertical-align: middle;
+    span{
+      line-height: 26px;
+    }
+  }
+
+}
+/* /Commun */
+
+/* ----------------------------- */
+
+
+/* ==desktop and retina medias   */
+
+/* ----------------------------- */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  /* Style adjustments for retina devices */
+}
+
+
+@media (max-width: 840px) {
+  .centre{
+    padding: 0 20px;
+  }
+
+  .contexte .texte{
+    column-count: 1;
+  }
+
+}
+
+
+@media (min-width: 768px) {
+  .large-hidden{
+    display: none;
+  }
+}
+
+@media (max-width:767px) {
+  .small-hidden {
+    display: none !important;
+  }
+
+  .small-visible {
+    display: block !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .very_very_big{
+    font-size: 2em;
+  }
+
+  .little_more_more_big{
+    font-size: 1.65em;
+  }
+
+  .more_normal{
+    font-size: 1em;
+  }
+}
+
+@media (max-width:540px) {
+  .right-menu.volet-marqueur{
+    left: inherit;
+    margin-top: 0;
+    right: 20px;
+    top: 20px;
+    z-index: 13;
+  }
+
+  .volet.marqueur{
+    .sidr-inner{
+      padding: 30px 0;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  /* quick reset in small resolution and less */
+
+  /* layouts for small screens */
+ 
+
+  /* you shall not pass */
+
+  div,
+  textarea,
+  code,
+  pre,
+  samp {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-menu{
+    bottom: 6px;
+    margin-right: -19px;
+    margin-top: 0;
+    right: 50%;
+    top:inherit;
+    width: 38px;
+    height: 38px;
+
+    &.ouvert{
+      /*bottom:inherit;
+      right: 20px;
+      top: 20px;
+      margin-right: 0;*/
+      z-index: 15;
+    }
+  }
+
+  .volet {
+    background: #fff none repeat scroll 0 0;
+    left: 480px;
+    overflow: scroll;
+    padding: 60px 25px;
+    position: absolute;
+    top: 0px;
+    z-index: 14;
+    display: none;
+  }
+
+  .sidr{
+    width: 100%;
+    .sidr-inner{
+      padding: 60px 35px;
+    }
+  }
+
+  .logo-principal.txtcenter{
+    width: 120px;
+    margin-left: -60px;
+    &.logo-question{
+      display: none;
+    }
+  }
+
+  .sidr h1{
+    font-size: 1.5em;
+    &:after{
+      margin: 10px auto;
+    }
+  }
+}
